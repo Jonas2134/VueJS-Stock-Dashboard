@@ -1,38 +1,60 @@
 <template lang="html">
-
   <section class="app-main-content">
-    <h1>app-main-content Component</h1>
+    <AppTopOverview />
+    <div>
+      <AppCard />
+      <AppCard />
+    </div>
+    <div>
+      <AppCard />
+      <AppCard />
+      <AppCard />
+    </div>
   </section>
 
 </template>
 
 <script lang="js">
+import AppCard from '@/shared/AppCard.vue';
+import AppTopOverview from './AppTopOverview.vue';
 
-  export default  {
-    name: 'AppMainContent',
-    props: [],
-    mounted () {
 
-    },
-    data () {
-      return {
+export default {
+  name: 'AppMainContent',
+  props: [],
+  mounted() {
 
-      }
-    },
-    methods: {
-
-    },
-    computed: {
+  },
+  data() {
+    return {
 
     }
+  },
+  methods: {
+
+  },
+  computed: {
+
+  },
+  components: {
+    AppTopOverview,
+    AppCard
+  }
 }
 
 
 </script>
 
 <style scoped lang="scss">
-  .app-main-content {
+.app-main-content {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-direction: column;
+
+  > div {
     display: flex;
-    justify-content: center;
+    gap: 32px;
   }
+}
 </style>
